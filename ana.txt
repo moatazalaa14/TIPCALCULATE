@@ -1,0 +1,12 @@
+-bill
+	number
+-sevice
+	number	
+-peopleshare
+	number
+-calButton
+	calculateBill()
+	resetform()
+-result
+	result(calculateBill())
+	displayIt()
