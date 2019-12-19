@@ -13,31 +13,37 @@ class CalApp{
             
         
     }
-    //dont reload(send data) when click button      i dont know why i call it(resetform) -_______-
+    // make inputs empty when u enter data
     resetForm(){
-        document.querySelector('form').addEventListener('click',(e)=>{
-            e.preventDefault();
-        })
-
-    }
-   //make button dont display result if input is empty
+        return(bill.value === "" &&
+            people.value ==="" )
+            
+        }
+        //make button dont display result if input is empty
     vaildInput(){
         document.querySelector('button').addEventListener('click',()=>{
             
             if(bill.value === "" || people.value === ""){
-                window.alert('No items yet')
+                window.alert('Fill is empty')
+            }
+            else if(bill.value <= 0 ||people.value <= 0){
+                window.alert("Invaild value");
             }
             else{
                 cal.billResult()
+                cal.resetForm();
             }
         })
     }
-   
+    
 }
 const cal = new CalApp();
-cal.resetForm();
 cal.vaildInput();
 
+//dont reload(send data) when click button     
+document.querySelector('form').addEventListener('click',(e)=>{
+    e.preventDefault();
+})
 
 
 
