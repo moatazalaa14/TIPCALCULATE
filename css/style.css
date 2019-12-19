@@ -1,0 +1,46 @@
+*{
+    padding: 0px;
+    margin :0px
+}
+body{
+    background-image: url(../imgs/bg1.jpg);
+    background-size: cover;
+}
+button , label , button{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form{
+    margin-left: 40%;
+    margin-top: 5%;
+}
+label{
+    color: white;
+    font-family: 'Lilita One', cursive;
+    font-size: 20px;
+}
+button{
+    width: 300px;
+    height: 30px;
+    background-color: white;
+    border: none;
+    font-family: 'Lilita One', cursive;
+
+}
+input , select{
+    width: 300px;
+    height: 30px;
+    font-family: 'Lilita One', cursive;
+
+}
+.result{
+    font-family: 'Lilita One', cursive;
+    color: white;
+    font-size: 20px;
+    margin-left: 40%;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}

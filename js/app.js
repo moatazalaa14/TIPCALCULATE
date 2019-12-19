@@ -9,10 +9,11 @@ class CalApp{
     }
     //put result in divison which take classname="result"
     billResult(){
-            document.querySelector('.result').innerHTML=this.calculateBill(parseInt(bill.value),parseFloat(service.value),parseInt(people.value))
+            document.querySelector('.result').innerHTML=`everyone pay`+this.calculateBill(parseInt(bill.value),parseFloat(service.value),parseInt(people.value))+`$`
             
         
     }
+    //dont reload(send data) when click button      i dont know why i call it(resetform) -_______-
     resetForm(){
         document.querySelector('form').addEventListener('click',(e)=>{
             e.preventDefault();
