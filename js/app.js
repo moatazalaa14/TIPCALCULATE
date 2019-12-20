@@ -15,10 +15,9 @@ class CalApp{
     }
     // make inputs empty when u enter data
     resetForm(){
-        return(bill.value === "" &&
-            people.value ==="" )
-            
-        }
+        bill.value ="";
+        people.value = "";
+    }
         //make button dont display result if input is empty
     vaildInput(){
         document.querySelector('button').addEventListener('click',()=>{
@@ -28,10 +27,11 @@ class CalApp{
             }
             else if(bill.value <= 0 ||people.value <= 0){
                 window.alert("Invaild value");
+                this.resetForm();
             }
             else{
-                cal.billResult()
-                cal.resetForm();
+                this.billResult()
+                this.resetForm();
             }
         })
     }
